@@ -25,10 +25,6 @@ function Item({ item, onUpdateItem, onDeleteItem }) {
         .then((updatedItem) => onUpdateItem(updatedItem));
     }
   
-  function handleDeleteItem(deletedItem) {
-    const updatedItems = items.filter((item) => item.id !== deletedItem.id);
-    setItems(updatedItems);
-  }
     
   return (
     <li className={item.isInCart ? "in-cart" : ""}>
